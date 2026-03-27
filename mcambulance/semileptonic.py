@@ -51,8 +51,9 @@ class BtoDstarstarlnu:
             p = np.sqrt(lam(M2, self.m_2 ** 2, self.m_3 ** 2)) / 2. / np.sqrt(M2)
             pp = 1.
         elif self.threebody:
-            if self.m_3 == self.m_4:
-                m = self.m_3
+            # Treat the pi^+ pi^0 cases as equal-mass case
+            if abs(self.m_3 - self.m_4) < 0.01:
+                m = min(self.m_3, self.m_4)
                 M = self.m_2
             else:
                 raise Exception("Mass configuration not supported")
