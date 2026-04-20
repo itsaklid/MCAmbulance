@@ -21,6 +21,7 @@ import numpy as np
 from copy import deepcopy
 
 from .ff_hqet import BtoD0lnu_HQET, BtoD1plnu_HQET
+from .ff_hqet import BtoD0lnu_ISGW2, BtoD1plnu_ISGW2
 from .defaults import ff_conf_dict, kin_conf_dict
 
 class MCAmbulance:
@@ -43,6 +44,10 @@ class MCAmbulance:
             self._decay = BtoD0lnu_HQET(kin_conf_dict[(bmeson, "d0", lepton, "d_pipi")], ff_conf_dict["d0"])
         elif channel == "d0_dstar_pipi":
             self._decay = BtoD0lnu_HQET(kin_conf_dict[(bmeson, "d0", lepton, "dstar_pipi")], ff_conf_dict["d0"])
+        elif channel == "d0_d_pi_isgw2":
+            self._decay = BtoD0lnu_ISGW2(kin_conf_dict[(bmeson, "d0", lepton)], ff_conf_dict["d0_isgw2"])
+        elif channel == "d1p_dstar_pi_isgw2":
+            self._decay = BtoD1plnu_ISGW2(kin_conf_dict[(bmeson, "d1p", lepton)], ff_conf_dict["d1p_isgw2"])
         else:
             raise Exception("Decay not supported")
 

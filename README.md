@@ -18,6 +18,10 @@ The following decays are supported:
 - $B \rightarrow D_1\prime(\rightarrow D \pi \pi) \ell \nu$, based on [1196700001.dec](https://github.com/belle2/basf2/blob/main/decfiles/dec/1196700001.dec) and [1296700001.dec](https://github.com/belle2/basf2/blob/main/decfiles/dec/1296700001.dec)
 - $B \rightarrow D_1\prime(\rightarrow D^\ast \pi \pi) \ell \nu$, based on [1196700002.dec](https://github.com/belle2/basf2/blob/main/decfiles/dec/1196700002.dec) and [1296700002.dec](https://github.com/belle2/basf2/blob/main/decfiles/dec/1296700002.dec)
 
+In addition, we provide ```ISGW2``` implementations of
+- $B \rightarrow D_0^\ast(\rightarrow D \pi) \ell \nu$
+- $B \rightarrow D_1\prime(\rightarrow D^\ast \pi) \ell \nu$
+
 Note that decays simulated with the ```PHSP``` model are not affected, and so we do not provide code to reweight them.
 
 # Installation
@@ -55,6 +59,8 @@ The constructor of ```MCAmbulance``` takes three arguments:
 - ```channel```: ```d0_d_pi```, ```d0_d_eta```, ```d0_d_pipi```, ```d0_dstar_pipi```, ```d1p_dstar_pi```, ...
 - ```lepton```: ```e```, ```mu``` or ```tau```
 
+To select the ```ISGW2``` implementations, ```channel``` is either ```d0_d_pi_isgw2``` or ```d1p_dstar_pi_isgw2```
+
 # References
 If you use MCAmbulance, you should cite the following references:
 - MCAmbulance: Florian Herren and Raynette van Tonder, [arXiv:2602.18378](https://arxiv.org/abs/2602.18378)
@@ -62,6 +68,7 @@ If you use MCAmbulance, you should cite the following references:
 - [basf2](https://github.com/belle2/basf2): Belle-II Framework Software Group, [Comput.Softw.Big Sci. 3 (2019) 1, 1](https://doi.org/10.1007/s41781-018-0017-9)
 - LLSW parametrisation: Adam K. Leibovich, Zoltan Ligeti, Ian M. Stewart and Mark B. Wise, [Phys.Rev.Lett. 78 (1997) 3995-3998](https://doi.org/10.1103/PhysRevLett.78.3995) & [Phys.Rev.D 57 (1998) 308-330](https://doi.org/10.1103/PhysRevD.57.308)
 - Default form factor values: Florian U. Bernlochner and Zoltan Ligeti, [Phys.Rev.D 95 (2017) 1, 014022](https://doi.org/10.1103/PhysRevD.95.014022)
+- If using the ISGW2 form factors: Daryl Scora and Nathan Isgur, [Phys.Rev.D 52 (1992) 2783-2812](https://doi.org/10.1103/PhysRevD.52.2783)
 
 # Authors
  * Florian Herren <florian.s.herren@gmail.com>
