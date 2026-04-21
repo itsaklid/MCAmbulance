@@ -133,10 +133,12 @@ def get_channel_string(channel):
         - "d0_d_eta"
         - "d0_d_pipi"
         - "d0_dstar_pipi"
+        - "d0_d_pi_isgw2"
         - "d1p_dstar_pi"
         - "d1p_dstar_eta"
         - "d1p_d_pipi"
         - "d1p_dstar_pipi"
+        - "d1p_dstar_pi_isgw2"
 
     Returns
     -------
