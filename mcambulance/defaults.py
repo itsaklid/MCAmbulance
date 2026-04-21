@@ -18,8 +18,11 @@
 # If not, see <https://www.gnu.org/licenses/>. 
 
 from copy import deepcopy
-from .conf import kin_conf, hqet_conf
+from .conf import kin_conf, hqet_conf, isgw2_conf
 import numpy as np
+
+broad_isgw2_conf = isgw2_conf()
+broad_isgw2_conf.mbx = 2.4675
 
 
 broad_llsw_conf = hqet_conf()
@@ -33,6 +36,8 @@ broad_llsw_conf.Lps = 0.76
 ff_conf_dict = {}
 ff_conf_dict[('d0')] = broad_llsw_conf
 ff_conf_dict[('d1p')] = broad_llsw_conf
+ff_conf_dict[('d0_isgw2')] = broad_isgw2_conf
+ff_conf_dict[('d1p_isgw2')] = broad_isgw2_conf
 
 m_e = 0.51099895e-3
 m_mu = 105.65837e-3
