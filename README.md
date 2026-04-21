@@ -54,6 +54,8 @@ The constructor of ```MCAmbulance``` takes three arguments:
 - ```channel```: ```d0_d_pi```, ```d0_d_eta```, ```d0_d_pipi```, ```d0_dstar_pipi```, ```d1p_dstar_pi```, ...
 - ```lepton```: ```e```, ```mu``` or ```tau```
 
+The `utils.py` file provides helper functions to compute invariant masses from four-momenta and to generate LaTeX strings for the supported decay modes.
+
 # References
 If you use MCAmbulance, you should cite the following references:
 - MCAmbulance: Florian Herren and Raynette van Tonder, [arXiv:2602.18378](https://arxiv.org/abs/2602.18378)
